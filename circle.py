@@ -29,7 +29,7 @@ class Training(object):
 def get_training_dataset():
     input_vecs = [1, 3, 4, 7]
     labels = [6.28, 18.84, 25.12, 43.96]
-    #labels = [3.1416, 28.274, 50.265, 153.94]
+    # labels = [3.1416, 28.274, 50.265, 153.94]
     return input_vecs, labels
 
 
