@@ -23,7 +23,8 @@ class Training(object):
             self._update_weight(input_vec, output, label, rate)
 
     def _update_weight(self, input_vec, output, label, rate):
-        self.weight += rate * (label - output) * input_vec
+        self.weight += rate * ((label - output) / input_vec)
+        # self.weight += rate * (label - output) * input_vec
 
 
 def get_training_dataset():
@@ -36,7 +37,7 @@ def get_training_dataset():
 def train_and_percptron():
     input_vecs, labels = get_training_dataset()
     p = Training()
-    p.train(input_vecs, labels, 10, 0.1)
+    p.train(input_vecs, labels, 50, 0.1)
     return p
 
 
